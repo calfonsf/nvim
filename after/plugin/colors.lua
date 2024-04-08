@@ -17,15 +17,16 @@ function Colorscheme(theme)
 	vim.cmd.colorscheme(Color)
 end
 
--- Tokyodark disable_italics
 require("tokyodark").setup({
-	styles = {
-		comments = {}, -- style for comments
-		keywords = {}, -- style for keywords
-		identifiers = {}, -- style for identifiers
-		functions = {}, -- style for functions
-		variables = {}, -- style for variables
-	}
+    gamma = 0.85,
+    styles = {
+        comments = {}, -- style for comments
+        keywords = {}, -- style for keywords
+        identifiers = {}, -- style for identifiers
+        functions = {}, -- style for functions
+        variables = {}, -- style for variables
+    },
 })
 
-vim.cmd.colorscheme("tokyodark")
+
+vim.cmd.colorscheme("catppuccin-mocha")
