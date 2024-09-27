@@ -5,7 +5,7 @@ vim.wo.number = true
 vim.opt.relativenumber = true
 
 --font
-vim.opt.guifont = "FiraCode Nerd Font:h12"
+vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
 
 --other
 vim.opt.scrolloff = 8
