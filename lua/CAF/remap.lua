@@ -3,15 +3,16 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "m"
 
 --filesystem
-vim.keymap.set("n", "<leader>.", vim.cmd.Oil, {desc = "File Explorer"})
-vim.keymap.set("n", "<leader>oc", "<CMD>cd %:h<CR>", {desc = "Open Current Dir"})
+vim.keymap.set("n", "<leader>.", vim.cmd.Oil, { desc = "File Explorer" })
+vim.keymap.set("n", "<leader>oc", "<CMD>cd %:h<CR>", { desc = "Open Current Dir" })
 
---neotree
-vim.keymap.set("n", "<leader>ot", vim.cmd.Neotree, {desc = "Open Neotree"})
+--git
+vim.keymap.set("n", "<leader>gg", vim.cmd.Neogit, { desc = "Neogit Status" })
 
---toogleterm
-vim.keymap.set("n", "<leader>tt", vim.cmd.ToggleTerm, { desc = "Toggle Terminal"} )
-
+--projects
+if vim.loop.os_uname().sysname == "Windows_NT" then
+    vim.keymap.set("n", "<leader>op", "<CMD>Oil D:\\Workstation\\Projects\\Code<CR>", { desc = "Open Projects" })
+end
 
 --move around
 vim.keymap.set("n", "<C-d>", "<C-d>zz")

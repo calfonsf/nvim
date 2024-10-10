@@ -3,18 +3,26 @@
 SCHEMES
 1- tokyonight, tokyonight-night
 2- rose-pine
-3- tokyodark
 ]]
 
 -- Set Colorscheme
-function Colorscheme(theme)
-	Color = Color or theme
+function Colorscheme(color)
+    color = color or "rose-pine"
 
-	require(Color).setup({
-		disable_italics = true
-	})
+    -- this works for rose-pine
+    require(color).setup({
+        -- transparent = true,
 
-	vim.cmd.colorscheme(Color)
+        styles = {
+            bold = true,
+            italic = false,
+            -- transparency = true,
+        }
+    })
+    vim.cmd.colorscheme(color)
+    -- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
-vim.cmd.colorscheme("tokyonight")
+--setting-color
+Colorscheme("rose-pine")

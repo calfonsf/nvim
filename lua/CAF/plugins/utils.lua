@@ -2,9 +2,6 @@ return{
 	-- practice bindigngs
 	{'ThePrimeagen/vim-be-good'},
 
-	-- indenting line
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-
 	-- autopairs for brackets 
 	{
 		'windwp/nvim-autopairs',
