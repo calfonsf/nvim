@@ -6,6 +6,10 @@ return {
 		"sindrets/diffview.nvim",        -- optional
 		"ibhagwan/fzf-lua",              -- optional
 	},
-	config = true
+	config = function()
+        --git
+        vim.keymap.set("n", "<leader>gg", vim.cmd.Neogit, { desc = "Neogit Status" })
+        require("neogit").setup()
+    end
 }
 

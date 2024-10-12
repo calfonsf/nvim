@@ -1,11 +1,4 @@
 -- Themes
---[[
-SCHEMES
-1- tokyonight, tokyonight-night
-2- rose-pine
-]]
-
--- Set Colorscheme
 function Colorscheme(color)
     color = color or "rose-pine"
 
@@ -24,5 +17,11 @@ function Colorscheme(color)
     -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
---setting-color
-Colorscheme("rose-pine")
+return {
+    { "folke/tokyonight.nvim", lazy = true,        priority = 1000 },
+    { "rose-pine/neovim",      name = "rose-pine", priority = 1000,
+    config = function()
+        Colorscheme("rose-pine")
+    end
+}
+}
