@@ -18,10 +18,17 @@ function Colorscheme(color)
 end
 
 return {
-    { "folke/tokyonight.nvim", lazy = true,        priority = 1000 },
-    { "rose-pine/neovim",      name = "rose-pine", priority = 1000,
-    config = function()
-        Colorscheme("rose-pine")
-    end
-}
+    {
+        "folke/tokyonight.nvim",
+        priority = 1000,
+        config = function()
+            Colorscheme("tokyonight")
+        end
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        priority = 1000,
+
+    }
 }

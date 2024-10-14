@@ -27,4 +27,3 @@ vim.keymap.set("n", "<leader>P", "\"+P", { desc = "Paste From Clipboard" })
 vim.keymap.set("n", "<leader>y", "\"+yy", { desc = "Copy To Clipboard" })
 vim.keymap.set("v", "<leader>P", "\"+P", { desc = "Paste From Clipboard" })
 vim.keymap.set("v", "<leader>Y", "\"+Y", { desc = "Copy To Clipboard" })
-
